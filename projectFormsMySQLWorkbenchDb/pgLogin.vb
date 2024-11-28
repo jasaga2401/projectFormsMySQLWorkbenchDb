@@ -20,7 +20,7 @@ Public Class pgLogin
             Try
                 conn.Open()
 
-                ' SQL query to find the username and password
+                ' SQL query to find the username and passwords
                 Dim query As String = "SELECT COUNT(*) FROM tblcustomer WHERE username = @username AND passwd = @password"
 
                 Using cmd As New MySqlCommand(query, conn)
@@ -54,5 +54,6 @@ Public Class pgLogin
         Me.Close()
 
     End Sub
+
 
 End Class
